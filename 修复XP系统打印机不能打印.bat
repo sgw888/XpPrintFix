@@ -6,7 +6,8 @@ echo.
 echo 1.停止打印机服务...
 net stop "Print Spooler"
 echo 2.删除打印任务
-del C:\WINDOWS\system32\spool\PRINTERS\*.* /a /q
+rem del C:\WINDOWS\system32\spool\PRINTERS\*.* /a /q
+del %SystemRoot%\system32\spool\PRINTERS\*.* /a /q
 echo.
 echo 3.重启打印机服务
 net start "Print Spooler"
